@@ -59,7 +59,10 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-5 text-xs text-white/60 sm:flex-row sm:items-center">
           <p>© Copyright by Sombrilla Group of Companies</p>
-          <Link href="/privacy-policy" className="uppercase hover:text-white">Privacy Policy</Link>
+          <div className="flex gap-5">
+            <Link href="/cancellation-policy" className="uppercase hover:text-white">Cancellation Policy</Link>
+            <Link href="/privacy-policy" className="uppercase hover:text-white">Privacy Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -46,6 +46,15 @@ export default function ContactPage() {
           </div>
         </aside>
       </section>
+
+      <section className="container-x pb-16">
+        <iframe
+          title="Sombrilla Group of Companies – Savaneta 175E, Aruba"
+          src="https://maps.google.com/maps?q=Savaneta%20175E%2C%20Aruba&t=m&z=13&output=embed&iwloc=near"
+          loading="lazy"
+          className="h-80 w-full rounded-xl border-0"
+        />
+      </section>
     </>
   );
 }

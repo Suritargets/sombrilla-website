@@ -28,6 +28,10 @@ export const nav = [
 
 export const ceisMenu = [
   { label: "CEIS 2025", href: "/ceis-2025" },
+  { label: "Speakers", href: "/ceis-2025/speakers" },
+  { label: "Venue", href: "/ceis-2025/venue" },
+  { label: "Program", href: "/ceis-2025/program" },
+  { label: "Sponsorship", href: "/ceis-2025/sponsorship" },
   { label: "Event Details", href: "/event-details" },
   { label: "Event Registration", href: "/event-registration" },
 ];
@@ -215,13 +219,7 @@ export const skaiObjectives = [
   { title: "Driving Regional Innovation", text: "Through our conferences and initiatives, SKAI focuses on promoting innovation in finance, trade, and sustainable practices, helping businesses and institutions navigate the future economic landscape." },
 ];
 
-export const speakers = [
-  { name: "Brian Weighs", bio: "Brian Weihs is a Kroll Managing Director with 30 years of experience in corporate investigations, compliance, and risk advisory across Latin America." },
-  { name: "Andrew Sabiran", bio: "Mario Merhai is CEO of Assuria N.V. and a seasoned actuarial leader with decades of experience driving insurance and financial growth across the Caribbean.", image: "/images/speaker-andrew.jpg" },
-  { name: "Stephen Geerman", bio: "Stephen Geerman is Founder & MD of AXIOMA, a leading advisory firm in audit, compliance, and fintech across the Dutch Caribbean." },
-  { name: "Nihaila Sambo", bio: "Nihaila Sambo, MSc, CAMS, is Acting Head of FIU Curaçao, with 18+ years in financial regulation, AML/CFT, and financial crime resolution.", image: "/images/speaker-1.png" },
-  { name: "Marguerite Tjong A Hung", bio: "Marguérite Tjong A Hung, CA MSc RA, is a leading Surinamese accountant and partner at TAH, driving audit excellence, education, and regional financial governance.", image: "/images/speaker-2.png" },
-];
+export { speakers } from "./ceis";
 
 export const attendees = [
   ["Financial Institutions & Regulators", "Central banks, commercial banks, insurance companies, and compliance professionals."],

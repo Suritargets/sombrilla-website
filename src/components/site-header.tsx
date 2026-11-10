@@ -18,7 +18,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const isActive = (item: (typeof nav)[number]) => {
     if (item.href === "/") return pathname === "/";
-    if ("menu" in item && item.menu === "ceis") return ceisPaths.includes(pathname);
+    if ("menu" in item && item.menu === "ceis") return ceisPaths.some((p) => pathname.startsWith(p));
     return pathname.startsWith(item.href);
   };
 
