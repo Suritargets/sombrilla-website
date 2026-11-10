@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -19,14 +18,17 @@ export const metadata: Metadata = {
     "Sombrilla Group of Companies provides solutions for business development and outsourcing needs: consulting, business, technology and event management.",
 };
 
+const clerkReady =
+  !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY &&
+  !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY.includes("placeholder");
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
+  const html = (
     <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-white font-sans text-navy">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        {children}
       </body>
     </html>
   );
+  return clerkReady ? <ClerkProvider>{html}</ClerkProvider> : html;
 }

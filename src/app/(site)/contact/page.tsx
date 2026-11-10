@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { CalendarCheck, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { socials } from "@/components/social-icons";
+import { buttonVariants } from "@/components/ui/button";
 import { site } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Contact" };
 
@@ -38,6 +41,7 @@ export default function ContactPage() {
               </li>
             ))}
           </ul>
+          <Link href="/book" className={cn(buttonVariants({ variant: "navy", size: "xl" }), "mt-8")}><CalendarCheck className="size-4" /> Book an appointment</Link>
           <p className="mt-8 text-sm font-semibold">Follow Us</p>
           <div className="mt-3 flex gap-4">
             {socials.map(({ label, href, Icon }) => (
